@@ -1,0 +1,25 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"> 
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee</title>
+<link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+</head>
+<body>
+<div class="container my-2" align="center">
+ <h2>Add Student</h2>
+ <hr/>
+ <form th:action="@{/saveStudent}" th:object="${student}" method="POST">
+
+     <input type="text" th:field="${student.sid}" placeholder="Enter sid" class="form-control col-4 mb-4"/>
+    <input type="text" th:field="${student.sname}" placeholder="Enter name" class="form-control col-4 mb-4"/>
+     <input type="text" th:field="${student.address}" placeholder="Enter address" class="form-control col-4 mb-4"/>
+      <input type="text" th:field="${student.emailId}" placeholder="Enter emailId" class="form-control col-4 mb-4"/>
+       <input type="text" th:field="${student.mobilenumber}" placeholder="Enter mobilenumber" class="form-control col-4 mb-4"/>
+       <button class="btn btn-primary" type="submit">save</button>
+       </form>
+</div>
+</body>
+</html>
